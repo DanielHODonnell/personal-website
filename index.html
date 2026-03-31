@@ -2,12 +2,141 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal-website</title>
+    <title>Daniel O'Donnell — Professional Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <a href="#home">Daniel O'Donnell</a>
+        </div>
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+
+          <label class="theme-switch" title="Toggle dark mode">
+            <input type="checkbox" id="theme-toggle" aria-label="Dark mode toggle" />
+            <span class="switch-slider"></span>
+          </label>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-content">
+          <p class="eyebrow">University of Nebraska at Omaha 2026 graduate</p>
+          <h1>Hi, I’m <strong>Daniel O'Donnell!</strong></h1>
+          <p class="subtitle">Computer Science graduate with a passion for software development, machine learning, and data science.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Work</a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>I am a 2026 Computer Science graduate with a strong foundation in software engineering and a passion for creating innovative solutions to complex problems.
+            My interests include software development, machine learning/artificial intelligence, and data science. I am eager to apply my skills and knowledge in 
+            a dynamic and collaborative environment where I can contribute to impactful projects and continue to grow as a professional.
+          </p>
+          <ul class="about-list">
+            <li><strong>Past Internship:</strong> Data Science Omaha Public Works</li>
+            <li><strong>Location:</strong> Omaha, NE</li>
+            <li><strong>Focus:</strong> Maintaining and improving data pipelines.</li>
+          </ul>
+          <h2>Education</h2>
+          <p>Currently pursuing a Bachelor of Science in Computer Science at the University of Nebraska at Omaha
+            and am expected to graduate in May 2026. My coursework has provided me with a solid foundation in programming, 
+            algorithms, data structures, and software engineering principles as well. I have also completed several projects that have allowed me to apply my skills in real-world scenarios, 
+            including a capstone project where I developed a competitor monitoring dashboard for Bar IQ using web scraping and natural language processing techniques. 
+            <a class="link" href=#projects>See Projects section for more details.</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="skills">
+        <div class="container">
+          <h2>Core Skills</h2>
+          <div class="cards-grid">
+            <article class="skill-card">
+              <h3>Backend Development</h3>
+              <p>Python, Java, SQL, MySQL, API design, database optimization.</p>
+            </article>
+            <article class="skill-card">
+              <h3>Frontend Development</h3>
+              <p>HTML, JavaScript, Tailwind CSS, TypeScript, performance optimization.</p>
+            </article>
+            <article class="skill-card">
+              <h3>Leadership</h3>
+              <p>Team collaboration, project planning, peer mentoring, stakeholder communication.</p>
+            </article>
+            <article class="skill-card">
+              <h3>Strategy</h3>
+              <p>Product discovery, user research, roadmaps, launch metrics, growth planning.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div class="cards-grid">
+            <article class="project-card">
+              <h3>Bar IQ Competitor Monitoring Dashboard (Capstone Project)</h3>
+              <p><strong>Summary: </strong>Utilized webscraping techniques to gather competitor data and built a real-time monitoring dashboard as well as implementing 
+                data analytics using natural language processing to analyze scraped data to generate actionable insights for Bar IQ. 
+              </p>
+              <p>
+                <strong>Technologies Used: </strong> Python, BeautifulSoup, FastAPI, spacy.io and HTML/CSS/JavaScript for the dashboard interface.
+              </p>
+              <a class="link" href="https://github.com/26SP-CSCI4970-820-Capstone-Project/BarIQ-Project2">GitHub Repository</a>
+            </article>
+            <article class="project-card">
+              <h3>FocusLearn: Flashcard and Study App for ADHD Students</h3>
+              <p><strong>Summary: </strong>Developed a user-friendly flashcard and study app tailored for students with ADHD, 
+                focusing on improving focus and retention by incorporating gamification elements, and a UI design that reduces distractions. 
+              </p>
+              <p>
+                <strong>Technologies Used: </strong> Python, Flask, SQLite, HTML/CSS/JavaScript for the frontend interface.
+              </p>
+              <a class="link" href="https://github.com/CSCI4830-UNO/FocusLearn">GitHub Repository</a>
+            </article>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <h2>Contact and Social</h2>
+          <p>I hope to hear from you soon!</p>
+          <p><img src="src/assets/email.svg" alt="Email"> Email: <a class="link" href="mailto:dho2002@cox.net">dho2002@cox.net</a></p>
+          <p><img src="src/assets/github.svg" alt="GitHub"> GitHub: <a class="link" href="https://github.com/DanielHODonnell">github.com/DanielHODonnell</a></p>
+          <p><img src="src/assets/linkedin.svg" alt="LinkedIn"> LinkedIn: <a class="link" href="https://www.linkedin.com/in/daniel-o-donnell-184071280/">www.linkedin.com/in/daniel-o-donnell-184071280</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Daniel O'Donnell. All rights reserved.</span>
+        <span class="footer-links"><a href="#">Privacy</a> · <a href="#">Terms</a></span>
+      </div>
+    </footer>
+
+    <script>
+      // Dynamically set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="src/main.js"></script>
   </body>
 </html>
